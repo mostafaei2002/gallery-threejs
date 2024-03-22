@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { PointerLockControls } from 'three-stdlib';
 import { paintings } from './paintings';
+const BASE_URL = '/gallery-threejs/';
 
 class Gallery {
   paintingDistanceThreshold = 5;
@@ -79,7 +80,7 @@ class Gallery {
 
   _createFloor() {
     const floorTexture = new THREE.TextureLoader().load(
-      '/images/WoodFloor040_1K-JPG_Color.jpg'
+      BASE_URL + 'images/WoodFloor040_1K-JPG_Color.jpg'
     );
     // Create Floor
     const planeGeometry = new THREE.PlaneGeometry(50, 50);
@@ -96,7 +97,7 @@ class Gallery {
 
   _createWalls() {
     const wallTexture = new THREE.TextureLoader().load(
-      '/images/leather_white_diff_1k.jpg'
+      BASE_URL + 'images/leather_white_diff_1k.jpg'
     );
     wallTexture.wrapS = THREE.RepeatWrapping;
     wallTexture.wrapT = THREE.RepeatWrapping;
@@ -147,7 +148,7 @@ class Gallery {
 
   _createCeiling() {
     const ceilingTexture = new THREE.TextureLoader().load(
-      '/images/OfficeCeiling005_1K-JPG_Color.jpg'
+      BASE_URL + 'images/OfficeCeiling005_1K-JPG_Color.jpg'
     );
     const ceilingGeometry = new THREE.PlaneGeometry(50, 50);
     const ceilingMaterial = new THREE.MeshBasicMaterial({

@@ -1,3 +1,4 @@
+const BASE_URL = '/gallery-threejs';
 const frontWall = [
   {
     src: '/artworks/0.jpg',
@@ -202,4 +203,12 @@ const leftWall = [
   },
 ];
 
-export const paintings = [...frontWall, ...backWall, ...rightWall, ...leftWall];
+export const paintings = [
+  ...frontWall,
+  ...backWall,
+  ...rightWall,
+  ...leftWall,
+].map((painting) => ({
+  ...painting,
+  src: BASE_URL + painting.src,
+}));
