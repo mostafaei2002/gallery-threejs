@@ -79,7 +79,7 @@ class Gallery {
 
   _createFloor() {
     const floorTexture = new THREE.TextureLoader().load(
-      'images/WoodFloor040_1K-JPG_Color.jpg'
+      '/images/WoodFloor040_1K-JPG_Color.jpg'
     );
     // Create Floor
     const planeGeometry = new THREE.PlaneGeometry(50, 50);
@@ -96,7 +96,7 @@ class Gallery {
 
   _createWalls() {
     const wallTexture = new THREE.TextureLoader().load(
-      'images/leather_white_diff_1k.jpg'
+      '/images/leather_white_diff_1k.jpg'
     );
     wallTexture.wrapS = THREE.RepeatWrapping;
     wallTexture.wrapT = THREE.RepeatWrapping;
